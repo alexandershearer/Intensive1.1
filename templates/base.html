@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creator's Hub</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="sidebar">
+            <h1 href="/">Home</h1>
+                <div class="sidebar_items">
+                    <h3>Art Types</h3>
+                    <a>Abstract</a>
+                    <a>Minimal</a>
+                    <a>Landscape</a>
+                    <a>Portrait</a>
+                </div>
+            <h1 href="/about">About</h1>
+        </nav>
+
+        {% block content %}{% endblock %}
+
+        <footer><div>
+            Copyright 2020 Alex Shearer 
+        </div></footer>
+
+        <script src="/static/index.js"></script>
+    </body>
+</html>

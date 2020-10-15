@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Creator's Hub</title>
-        <link rel="stylesheet" href="/static/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <nav class="sidebar">
-            <h1 href="/">Home</h1>
-                <div class="sidebar_items">
-                    <h3>Art Types</h3>
-                    <a>Abstract</a>
-                    <a>Minimal</a>
-                    <a>Landscape</a>
-                    <a>Portrait</a>
+{% extends 'base.html' %}
+{% block content %}
+
+<main>
+    <div class="greeting">
+        <h1 class="home_title">Crème de la Crème</h1>
+        <img class="greeting_post" src="https://i.pinimg.com/originals/69/36/ee/6936ee946ffcd68ae7e14b6719c01a80.jpg">
+        <div class="posts">
+            <a href="/new_post" class="new_post">New Post</a>
+            <!-- {%for post in posts%} -->
+            <div class="post">
+                <a href="/post/{{post['_id']}}"><img src="{{post['post_url']}}"></a>
+                <div class="post-content">
+                    <a href="/post/{{post['_id']}}">{{post['title']}}</a>
                 </div>
-            <h1 href="/about">About</h1>
-        </nav>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</main>
 
-        {% block content %}{% endblock %}
 
-        <footer><div>
-            Copyright 2020 Alex Shearer 
-        </div></footer>
-
-        <script src="/static/index.js"></script>
-    </body>
-</html>
+{% endblock content %}
