@@ -3,13 +3,16 @@
 
 <main>
     <div class="greeting">
-        <h1 class="home_title">Crème de la Crème</h1>
+        <h1 class="home_title"> Crème de la Crème</h1>
         <img class="greeting_post" src="https://i.pinimg.com/originals/69/36/ee/6936ee946ffcd68ae7e14b6719c01a80.jpg">
+        <p>This will be held for the desctiption of the top post</p>
+        <a href="/new_post" class="new_post">New Post</a>
+
+
         <div class="posts">
-            <a href="/new_post" class="new_post">New Post</a>
-            <!-- {%for post in posts%} -->
+            {%for post in posts%}
             <div class="post">
-                <a href="/post/{{post['_id']}}"><img src="{{post['post_url']}}"></a>
+                <a href="/post/{{post['_id']}}"><img src="{{post['picture_url']}}"></a>
                 <div class="post-content">
                     <a href="/post/{{post['_id']}}">{{post['title']}}</a>
                 </div>

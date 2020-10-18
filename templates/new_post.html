@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main>
+    <form method='POST'>
+            <legend><h1>What kind of creation do you have today??</h1></legend>
+
+            <label>
+                Post Title:
+            </label>
+            <input type="text" name="post_title">
+
+            <label>
+                Style:
+            </label>
+            <input type="text" name="style">
+
+            <label>
+                Description:
+            </label>
+            <input type="text" name="post_description">
+
+            <label>
+                Picture URL:
+            </label>
+            <input type="url" name="picture_url">
+
+            <label>
+                Date Created:
+            </label>
+            <input type="date" name="date_created">
+
+            <input type="submit" class="submit" value="Submit!">
+    </form>
+</main>
+
+{% endblock content %}
